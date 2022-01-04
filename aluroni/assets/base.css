@@ -1,0 +1,324 @@
+@import url(variaveis.css);
+
+body {
+    font-family: 'Italiana', serif;
+    min-width: auto;
+    background-color: var(--fundo);
+    transition: 0.5s;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    padding: 1em 0;
+    align-items: center;
+    align-content: ;
+}
+
+.logo__botao {
+    cursor: pointer;
+    border: 0px;
+    padding: 0px;
+    background: none;
+    border-radius: 4px;
+}
+
+.menu-nao-responsivo ul {
+    display: flex;
+    align-items: center;
+}
+
+.botao__cabecalho {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: var(--cinza-icones);
+}
+
+.menu-lateral, .botao-menu-hamburguer, #chekk, .botao-modo-noturno {
+    display: none;
+}
+
+.banner {
+    display: flex;
+    background-image: var(--banner);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 256px;
+    font-size: 42px;
+    color: var(--branco);
+    align-items: center;
+    transition: 0.5s;
+}
+
+.banner__titulo {
+    margin: 0 0 0 20%;
+}
+
+.principal__container {
+    width: 60%;
+    margin: auto;
+}
+
+#cardapio__titulo {
+    font-size: 36px;
+    margin-top: 40px;
+    color: var(--cortexto);
+}
+
+.campo__pesquisa {
+    margin-top: 40px;
+    border: 10px var(--cinza) solid;
+    padding: 0 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    background: var(--cinza);
+    border-radius: 4px;
+    background-image: url(./img/lupa.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.menu__cardapio {
+    margin: 20px 0 40px;
+}
+
+.menu__cardapio ul li {
+    display: inline;
+    font-weight: bold;
+}
+
+.menu__cardapio ul li a  {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--cinza);
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.menu__cardapio ul li #filtro {
+    border: none;
+    background-color: var(--cinza);
+    cursor: pointer;
+    font-family: Italiana, sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+}
+
+.menu__cardapio ul li:last-child a {
+    float: right;
+    margin-right: 0px;
+}
+
+.titulo__pratos {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: var(--cortexto);
+    transition: 0.5s;
+}
+
+.cardapio__p {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--cortexto);
+    transition: 0.5s;
+}
+
+.cardapio__lista {
+    font-family: 'Josefin Sans', sans-serif;
+    align-items: center
+}
+
+.porcao, .pessoas {
+    color: var(--cortexto);
+    padding-left: 5px;
+    transition: 0.5s;
+}
+
+.botao__like {
+    background-color: var(--cinza-icones);
+    border-radius: 4px;
+    padding: 10px 10px 5px 10px;
+    margin-left: 10px;
+}
+
+.cardapio__lista .massas {
+    padding: 10px 20px;
+    border-radius: 4px
+}
+
+.cardapio__lista .preco {
+    color: var(--coral);
+    font-size: 24px;
+    font-family: Italiana, sans-serif;
+}
+
+.tipo__de__prato {
+    background-color: var(--coral);
+    color: #FAFAFA;
+    padding: 10px 25px;
+    border-radius: 4px;
+}
+
+.container__menu__cardapio .container__menu__prato {
+    display: flex;
+    width: 100%;
+}
+
+.container__menu__prato {
+    margin-bottom: 50px;
+}
+
+.cardapio__imagem {
+    margin-right: 20px;
+}
+
+.cardapio__texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.titulo__pratos{    
+    line-height: 40px;
+}
+
+.cardapio__lista {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape {
+    display: block;
+    width: 100%;
+    padding: 2em 0;
+    margin-top: 60px;
+    background-color: var(--coral);
+    display: inline-block;
+}
+
+.logo__botao__rodape {
+    float: right;
+    margin-right: 20%;
+}
+
+@media (max-width: 810px) {
+    .cabecalho {
+        width: 90%;
+}
+
+    .botao-menu-hamburguer {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: var(--cinza-icones);
+        padding: 10px;
+        margin-left: 10px;
+        border-radius: 4px auto;
+        right: 35%;
+        cursor: pointer;
+        border-radius: 4px;
+}
+
+    .menu-lateral {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--fundo);
+        width: 40vw;
+        height: 100vh;
+
+        position: fixed;
+        right: -350px;
+        transition: .25s; 
+        border-radius: 4px 0px 0px 4px;
+    }
+
+    .menu-lateral--ativo {
+        right: 0;
+        transition: .25s;
+    }
+
+    .menu-lateral__link {
+        height: 45px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        border-bottom: 3px solid var(--cinza);
+        text-decoration: none;
+        color: var(--cortexto);
+    }
+    
+    .img-icone {
+        padding: 8px;
+        margin-right: 8px;
+        background-color: var(--cinza-icones);
+        border-radius: 4px;
+    }
+
+    .menu-lateral-fechar {
+        position: relative;
+        align-self: flex-end;
+        border-bottom: none;
+        margin-right: 20px;
+    }
+
+    .menu-nao-responsivo ul li:first-child {
+        display: none;
+    }
+
+    .banner__titulo {
+        margin-left: 5%;
+}
+    
+    .principal__container {
+        width: 90%;
+}
+
+    .cardapio__imagem {
+        height: 180px;
+}
+
+}
+
+@media (max-width: 480px) {
+
+        .campo__pesquisa {
+            width: 100%;
+            margin: 2em 0;
+        }
+
+        .menu__cardapio {
+            display: none;
+        }
+
+        .container__menu__cardapio .container__menu__prato {
+            display: initial;
+        }
+
+        .cardapio__imagem {
+            height: auto;
+            width: 100%;
+            margin: 0;
+        }
+
+        .cardapio__texto {
+            margin: 0.5em 0 2em;
+        }
+
+        .cardapio__lista {
+            font-size: 14px;
+        }
+
+        .tipo__de__prato {
+            display: none;
+        }
+}
